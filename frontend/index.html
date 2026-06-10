@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StylMart — Premium Lifestyle Store</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="toast-container" class="toast-container"></div>
+  <div class="top-bar">Free shipping on all orders · 30-day easy returns</div>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-brand"><span class="brand-icon">SM</span>StylMart</a>
+      <button class="mobile-toggle" onclick="toggleMobileMenu()">
+        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <div class="nav-center" id="nav-center">
+        <a href="/" class="active">Home</a>
+        <a href="/pages/products.html">Mart</a>
+        </div>
+      <div class="nav-right" id="nav-right">
+        <a href="/pages/login.html" class="btn btn-primary btn-sm">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-carousel" id="hero-carousel">
+    <div class="hero-slide active" data-index="0">
+      <img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?w=1200" alt="" class="hero-slide-img">
+      <div class="hero-slide-overlay">
+        <div class="hero-slide-content">
+          <div class="hero-tag">New Arrivals</div>
+          <h1>Luxury<br>Redefined</h1>
+          <p>Premium silk and cashmere. Timeless pieces crafted for those who demand the finest.</p>
+          <div>
+            <a href="/pages/products.html" class="hero-cta">Shop Women</a>
+            <a href="/pages/products.html?category=women" class="hero-cta hero-cta-outline">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide" data-index="1">
+      <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?w=1200" alt="" class="hero-slide-img">
+      <div class="hero-slide-overlay">
+        <div class="hero-slide-content">
+          <div class="hero-tag">Accessories</div>
+          <h1>Timeless<br>Craft</h1>
+          <p>Handpicked accessories that define your style. From watches to leather goods.</p>
+          <div>
+            <a href="/pages/products.html?category=accessories" class="hero-cta">Shop Now</a>
+            <a href="/pages/products.html?category=electronics" class="hero-cta hero-cta-outline">Electronics</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide" data-index="2">
+      <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?w=1200" alt="" class="hero-slide-img">
+      <div class="hero-slide-overlay">
+        <div class="hero-slide-content">
+          <div class="hero-tag">Sport</div>
+          <h1>Built to<br>Perform</h1>
+          <p>Premium athletic wear and gear engineered for peak performance and everyday comfort.</p>
+          <div>
+            <a href="/pages/products.html?category=sports" class="hero-cta">Shop Sports</a>
+            <a href="/pages/products.html?category=men" class="hero-cta hero-cta-outline">Shop Men</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide" data-index="3">
+      <img src="https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?w=1200" alt="" class="hero-slide-img">
+      <div class="hero-slide-overlay">
+        <div class="hero-slide-content">
+          <div class="hero-tag">Tailored</div>
+          <h1>Sharp<br>Elegance</h1>
+          <p>Master the art of dressing well. Tailored fits for the modern gentleman.</p>
+          <div>
+            <a href="/pages/products.html?category=men" class="hero-cta">Shop Men</a>
+            <a href="/pages/products.html" class="hero-cta hero-cta-outline">All Products</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-arrow prev" onclick="prevSlide()">←</button>
+    <button class="carousel-arrow next" onclick="nextSlide()">→</button>
+
+    <div class="carousel-dots">
+      <div class="carousel-dot active" onclick="goToSlide(0)"></div>
+      <div class="carousel-dot" onclick="goToSlide(1)"></div>
+      <div class="carousel-dot" onclick="goToSlide(2)"></div>
+      <div class="carousel-dot" onclick="goToSlide(3)"></div>
+    </div>
+  </section>
+
+  <div class="category-tiles" id="category-tiles"></div>
+
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <h2>Featured Products</h2>
+        <div class="subtitle">Handpicked favorites for you</div>
+      </div>
+      <a href="/pages/products.html" class="btn btn-outline">View All</a>
+    </div>
+    <div class="product-grid" id="featured-grid">
+      <div class="loading-container"><div class="spinner"></div></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div style="background:var(--black);padding:48px 40px;color:var(--white);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;border:4px solid var(--black)">
+      <div>
+        <h3 style="font-size:1.5rem;font-weight:900;margin-bottom:8px;text-transform:uppercase;letter-spacing:-1px">Become a Seller</h3>
+        <p style="opacity:0.6;max-width:400px;font-size:0.9rem">List your products on StylMart and reach thousands of customers. Zero fees. Full control.</p>
+      </div>
+      <a href="/pages/seller-dashboard.html" class="hero-cta" style="background:var(--white);color:var(--black);border:3px solid var(--black)">Start Selling</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">StylMart</div>
+        <p>Premium lifestyle store offering curated collections across fashion, accessories, electronics, and home living.</p>
+      </div>
+      <div><h4>Shop</h4><p><a href="/pages/products.html">All Products</a><br><a href="/pages/products.html?category=men">Men</a><br><a href="/pages/products.html?category=women">Women</a><br><a href="/pages/products.html?category=accessories">Accessories</a></p></div>
+      <div><h4>Support</h4><p><a href="#">Help Center</a><br><a href="#">Shipping Info</a><br><a href="#">Returns</a><br><a href="#">Contact</a></p></div>
+      <div><h4>Account</h4><p><a href="/pages/login.html">Sign In</a><br><a href="/pages/register.html">Register</a><br><a href="/pages/dashboard.html">Dashboard</a><br><a href="/pages/orders.html">Orders</a></p></div>
+      <div><h4>Company</h4><p><a href="#">About Us</a><br><a href="#">Careers</a><br><a href="#">Press</a><br><a href="#">Privacy</a></p></div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 StylMart. All rights reserved.</div>
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
